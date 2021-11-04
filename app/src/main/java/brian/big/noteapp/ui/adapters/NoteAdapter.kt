@@ -4,9 +4,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import brian.big.noteapp.R
 import brian.big.noteapp.model.Note
+import brian.big.noteapp.ui.NoteListFragmentDirections
 
 class NoteAdapter(private val notes: List<Note>): RecyclerView.Adapter<NoteAdapter.ViewHolder>() {
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
@@ -14,7 +16,10 @@ class NoteAdapter(private val notes: List<Note>): RecyclerView.Adapter<NoteAdapt
         val tvTitle: TextView = view.findViewById(R.id.tvTitle)
         val tvContent: TextView = view.findViewById(R.id.tvContent)
         init {
-            view.setOnClickListener { /* TODO navigate to view/edit note*/ }
+            view.setOnClickListener {
+                val action = NoteListFragmentDirections.actionFirstFragmentToSecondFragment(pos.toString())
+                view.findNavController().navigate(action)
+            }
         }
     }
 

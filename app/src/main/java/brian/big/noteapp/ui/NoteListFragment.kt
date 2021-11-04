@@ -1,13 +1,12 @@
 package brian.big.noteapp.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import brian.big.noteapp.R
 import brian.big.noteapp.data.NoteDataManager
 import brian.big.noteapp.databinding.FragmentNoteListBinding
 import brian.big.noteapp.ui.adapters.NoteAdapter
@@ -40,7 +39,8 @@ class NoteListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.fabNewNote.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+            val action =NoteListFragmentDirections.actionFirstFragmentToSecondFragment(null)
+            findNavController().navigate(action)
         }
     }
 }

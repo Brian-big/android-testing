@@ -21,4 +21,14 @@ object NoteDataManager {
             }
         }
     }
+    fun addNote(note: Note){
+        notes.add(note)
+    }
+    fun editNote(position: Int, note: Note){
+        val note1 = notes[position]
+        note1.apply {
+            title = note.title
+            content = note.content
+        }
+    }
 }

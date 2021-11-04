@@ -1,3 +1,3 @@
 package brian.big.noteapp.model
 
-data class Note(val title: String, var content: String)
+data class Note(var title: String, var content: String)
