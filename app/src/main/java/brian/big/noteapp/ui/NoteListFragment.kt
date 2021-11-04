@@ -9,19 +9,19 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import brian.big.noteapp.R
 import brian.big.noteapp.data.NoteDataManager
-import brian.big.noteapp.databinding.FragmentFirstBinding
+import brian.big.noteapp.databinding.FragmentNoteListBinding
 import brian.big.noteapp.ui.adapters.NoteAdapter
 
-class FirstFragment : Fragment() {
+class NoteListFragment : Fragment() {
 
-    private lateinit var binding: FragmentFirstBinding
+    private lateinit var binding: FragmentNoteListBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
 
-        binding = FragmentFirstBinding.inflate(inflater, container, false)
+        binding = FragmentNoteListBinding.inflate(inflater, container, false)
         initNotesRv()
         return binding.root
 

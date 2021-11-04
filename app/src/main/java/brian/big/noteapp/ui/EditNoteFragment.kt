@@ -7,18 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import brian.big.noteapp.R
-import brian.big.noteapp.databinding.FragmentSecondBinding
+import brian.big.noteapp.databinding.FragmentEditNoteBinding
 
-class SecondFragment : Fragment() {
+class EditNoteFragment : Fragment() {
 
-    private lateinit var binding: FragmentSecondBinding
+    private lateinit var binding: FragmentEditNoteBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
 
-        binding = FragmentSecondBinding.inflate(inflater, container, false)
+        binding = FragmentEditNoteBinding.inflate(inflater, container, false)
         return binding.root
 
     }
