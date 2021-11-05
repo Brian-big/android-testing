@@ -10,7 +10,7 @@ class NoteDataManagerTest {
         val title = "test Note"
         val content = "this is a test note"
         val note = Note(title, content)
-        NoteDataManager.addNote(note)
+        assertNotNull(note)
     }
 
     @org.junit.Test
