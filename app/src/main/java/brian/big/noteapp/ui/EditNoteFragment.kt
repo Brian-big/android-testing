@@ -27,7 +27,7 @@ class EditNoteFragment : Fragment() {
         binding = FragmentEditNoteBinding.inflate(inflater, container, false)
         if (args.notePosition != null){
             val pos = args.notePosition!!.toInt()
-            note = NoteDataManager.notes[pos]
+            note = NoteDataManager.getNote(pos)
             binding.apply {
                 etTitle.setText(note.title)
                 etContent.setText(note.content)

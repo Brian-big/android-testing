@@ -31,4 +31,7 @@ object NoteDataManager {
             content = note.content
         }
     }
+    fun getNote(position: Int): Note{
+        return notes[position]
+    }
 }
