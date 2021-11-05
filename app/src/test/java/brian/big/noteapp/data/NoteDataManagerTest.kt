@@ -15,7 +15,7 @@ class NoteDataManagerTest {
 
     @org.junit.Test
     fun getNote(){
-        assertNotNull(NoteDataManager.getNote(10))
+        assertNotNull(NoteDataManager.getNote(90))
     }
 
 }
